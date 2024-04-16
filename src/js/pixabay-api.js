@@ -12,7 +12,7 @@ let params = {
   orientation: 'horizontal',
   safesearch: true,
   page: 1,
-  per_page,
+  per_page: 15
 };
 
 async function fetchData(url, options = {}) {
