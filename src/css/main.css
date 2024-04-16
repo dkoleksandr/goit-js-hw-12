@@ -65,3 +65,7 @@ img {
     transform: rotate(360deg);
   }
 }
+
+.load-more {
+  margin: 25px;
+}

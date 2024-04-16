@@ -1,37 +1,31 @@
-import axios from "axios";
+import axios from 'axios';
 
-export { fetchData, setSearchValue, BASE_URL, params };
+export { fetchData, BASE_URL, params, page, per_page, updateSearchValue, updatePageValue };
+import { page, per_page } from '../main';
 
 const BASE_URL = 'https://pixabay.com/api/';
 const API_KEY = '43338805-0211d3d1e83cb5c165622303b';
 let searchValue;
 
-const params = {
+
+let params = {
   key: API_KEY,
   q: searchValue,
   image_type: 'photo',
   orientation: 'horizontal',
   safesearch: true,
+  page,
+  per_page
 };
 
-// function fetchData(url, options = '') {
-//   return fetch(`${url}?${options}`).then(response => {
-//     if (!response.ok) {
-//       throw new Error(response.status);
-//     }
-//     return response.json();
-//   });
-// }
-
-// function setSearchValue(value) {
-//   params.q = value;
-// }
-
 async function fetchData(url, options = {}) {
-  return await axios(url, {params})
+  return await axios(url, { params })
 }
 
-function setSearchValue(value) {
-  params.q = value;
+function updateSearchValue(search ) {
+  params.q = search;
 }
 
+function updatePageValue(page){
+  params.page = page;
+}
