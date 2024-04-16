@@ -1,15 +1,6 @@
 import axios from 'axios';
 import { page, per_page } from '../main';
 
-export {
-  fetchData,
-  BASE_URL,
-  params,
-  updateSearchValue,
-  updatePageValue,
-};
-
-
 
 const BASE_URL = 'https://pixabay.com/api/';
 const API_KEY = '43338805-0211d3d1e83cb5c165622303b';
@@ -36,3 +27,11 @@ function updateSearchValue(search) {
 function updatePageValue(page) {
   params.page = page;
 }
+
+export {
+  fetchData,
+  BASE_URL,
+  params,
+  updateSearchValue,
+  updatePageValue,
+};
