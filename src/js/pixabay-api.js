@@ -4,8 +4,6 @@ export {
   fetchData,
   BASE_URL,
   params,
-  page,
-  per_page,
   updateSearchValue,
   updatePageValue,
 };
