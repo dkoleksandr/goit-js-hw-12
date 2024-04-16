@@ -1,9 +1,10 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
+export { page, per_page };
 import { createMarkup, lightbox } from './js/render-functions';
 import { fetchData, BASE_URL, params, updateSearchValue, updatePageValue } from './js/pixabay-api';
-export { page, per_page };
+
 
 let page = 1;
 let per_page = 15;
