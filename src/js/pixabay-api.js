@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export { fetchData, setSearchValue, BASE_URL, params };
 
 const BASE_URL = 'https://pixabay.com/api/';
@@ -12,15 +14,24 @@ const params = {
   safesearch: true,
 };
 
-function fetchData(url, options = '') {
-  return fetch(`${url}?${options}`).then(response => {
-    if (!response.ok) {
-      throw new Error(response.status);
-    }
-    return response.json();
-  });
+// function fetchData(url, options = '') {
+//   return fetch(`${url}?${options}`).then(response => {
+//     if (!response.ok) {
+//       throw new Error(response.status);
+//     }
+//     return response.json();
+//   });
+// }
+
+// function setSearchValue(value) {
+//   params.q = value;
+// }
+
+async function fetchData(url, options = {}) {
+  return await axios(url, {params})
 }
 
 function setSearchValue(value) {
   params.q = value;
 }
+
