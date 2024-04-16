@@ -11,7 +11,7 @@ let params = {
   image_type: 'photo',
   orientation: 'horizontal',
   safesearch: true,
-  page,
+  page: 1,
   per_page,
 };
 
