@@ -16,7 +16,8 @@ let params = {
 };
 
 async function fetchData(url, options = {}) {
-  return await axios(url, { params });
+  console.log('p=',{ params: options });
+  return await axios(url, { params: options });
 }
 
 function updateSearchValue(search) {
