@@ -87,7 +87,7 @@ async function handleLoadMore() {
 
     window.scrollBy({
       left: 0,
-      top: cardHeight * 3,
+      top: cardHeight * 2,
       behavior: 'smooth',
     });
 
