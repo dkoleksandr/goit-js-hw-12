@@ -9,7 +9,6 @@ import {
   updateSearchValue,
   updatePageValue,
 } from './js/pixabay-api';
-export { page, per_page };
 
 let page = 1;
 let per_page = 15;
