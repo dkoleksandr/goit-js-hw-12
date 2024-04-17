@@ -73,7 +73,6 @@ async function handleLoadMore() {
   updatePageValue(page);
   loaderBottom.classList.remove('is-hidden');
 
-
   try {
     const { data } = await fetchData(BASE_URL, params);
 
@@ -93,6 +92,11 @@ async function handleLoadMore() {
 
     if (page >= Math.ceil(data.totalHits / per_page)) {
       loadMoreBtn.classList.add('is-hidden');
+      iziToast.show({
+        message: "We're sorry, but you've reached the end of search results.",
+        color: 'red',
+        position: 'topRight',
+      });
     }
   } catch (error) {
     alert(error.message);
